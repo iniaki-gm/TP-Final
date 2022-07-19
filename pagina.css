@@ -194,7 +194,7 @@ button:hover {
     border-radius: 10px;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
 
     .divisor{
         display: flex;
@@ -211,6 +211,9 @@ button:hover {
         flex-direction: column;
         align-content: center;
     }
+
+    
+
     
 
 
@@ -395,7 +398,7 @@ button:hover {
     display: none;
 }
 
-@media (max-width:760px) {
+@media (max-width:768px) {
     .title-container button {
         display: none;
     }
