@@ -1,0 +1,565 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;    
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    width: 100%;
+    color: white;
+}
+
+.section-container {
+    background-color: black;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0px;
+    width: 95%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.Ventajana{
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: #d91e4d;
+    border: 1px solid #fafafa;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    width: 180px;
+    height: 40px;
+    outline: none;
+    transition:all 0.4s ease-out;
+}
+
+button:hover {
+    background-color: #97112a;
+    transition:all 0.4s ease-in;
+}
+
+/*Header*/
+
+.header-container {
+    position: sticky;
+    top: 0%;
+    z-index: 9999;
+}
+
+.header {
+    margin: 0 auto;
+    max-width: 1350px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px 0px 50px;
+    background-color: rgb(51, 51, 51);
+    border-block-end: 2px solid #d91e41;
+}
+
+.logo-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.img-logo {
+    width: 110px;
+    height: 100px;
+}
+
+.navbar,
+.navbar-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-list {
+    gap: 50px;
+}
+
+.navbar i {
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+#toggle-menu {
+    display: none;
+}    
+
+.navbar a {
+    color: white;
+    font-size: 22px;
+}
+
+.navbar-list li:last-child > a {
+    border: 1px solid white;
+    font-size: 14px;
+    padding: 8px 40px;
+    border-radius: 3px;
+    transition: all 0.3s linear;
+}
+
+.navbar-list li:last-child > a:hover {
+    background-color:  #d91e41;
+    color: white;
+    transition: all 0.3s linear;
+    font-weight: 700;
+}
+
+
+@media (max-width:992px) {
+    .header {
+        padding: 0px 50px 0px 10px;
+    }
+    .navbar i {
+        display: flex;
+    }
+    .navbar-list {
+        position: absolute;
+        background-color: black;
+        flex-direction: column;
+        top: 100px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 100px);
+        z-index: 9999;
+        display: none;
+    }
+    
+    #toggle-menu:checked + .navbar-list {
+        display: flex;
+    }
+}
+
+/* Hero */
+
+#hero {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 70px 50px;
+}
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+    gap: 40px;
+}
+
+.text-container, .button-container {
+    max-width: max(40%, 300px);
+}
+
+.description-container h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+}
+
+.description-container p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.hero-img {
+    background-image: url(https://static5.depositphotos.com/1040758/526/i/600/depositphotos_5262651-stock-photo-international-finance.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: 1 1 400px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+@media (max-width: 760px) {
+
+    .divisor{
+        display: flex;
+        text-align: center;
+    }
+    #ventajas {
+        gap: 15%;
+        flex-wrap: wrap;
+    }
+    
+    .Ventajana {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+    }
+    
+
+
+    .hero-img {
+        display: none;
+    }
+    .description-container {
+        justify-content: center;
+        align-items: center;
+    }
+    .text-container, .button-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ventajas-content {
+        height: 250px;
+        display: flex;
+        max-width: 300px;
+        /* flex: 1 1 50%; */
+        gap: 20px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/* Hero */
+/* Ventajas */
+
+#ventajas {
+    gap: 15%;
+    flex-wrap: wrap;
+}
+
+.ventaja-Img{
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    max-width: 300px;
+    flex: 1 1 300px;
+    border-radius: 5px;
+}
+
+.ventajas-content {
+   
+    max-width: 300px;
+    flex: 1 1 50%;
+    gap: 20px;
+    justify-content: center;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 31px;
+}
+
+.section-p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.ventajas-cards-container {
+    display: flex;
+    gap: 30px;
+}
+
+.ventajas-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 150px;
+    height: auto;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 3px solid #d91e41;
+    padding: 15px;
+    background-color: rgb(51, 51, 51);
+    gap: 8px;
+}
+
+.ventajas-card span {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/*@media (max-width: 768px) {
+    .ventajas-cards-container {
+        flex-direction: column;
+    }
+}*/
+
+/* Ventajas */
+/* Clientes */ 
+
+#clientes {
+    flex-direction: column;
+    gap: max(120px, 10%);
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 25%;
+    width: 100%;
+}
+
+.clientes-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 75%;
+    gap: 90px;
+}
+
+.clientes-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    flex: 1 1 200px;
+    height: 160px;
+    padding-top: 50px;
+    background-color:  rgb(51, 51, 51);
+    position: relative;
+    border: 3px solid #d91e41;
+}
+
+.clientes-cards-img {
+    position: absolute;
+    top: -50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    font-weight: 300;
+    color: black;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #d91e41;
+}
+
+.clientes-card:first-child .clientes-cards-img {
+    background-image: url(https://us.123rf.com/450wm/piksel/piksel1505/piksel150500005/39581396-joven-vinculaci%C3%B3n-de-la-familia.jpg);
+}
+
+.clientes-card:nth-child(2) .clientes-cards-img {
+    background-image: url(https://media-exp1.licdn.com/dms/image/C4E0BAQHUZAZYArv3Cw/company-logo_200_200/0/1564380410031?e=2147483647&v=beta&t=OAIVnHIkLjL9R4DyL4f7JTXw5SxE4dqGyhWI8P0S6Fc);
+}
+
+.clientes-card:nth-child(3) .clientes-cards-img {
+    background-image: url(https://media.istockphoto.com/vectors/golden-luxury-g-letter-logo-design-vector-id1306097912?k=20&m=1306097912&s=170667a&w=0&h=2djHVcXi7FwbjxGwhgKXJWhzmHYHS1h_AysalPt6moM=);
+}
+
+.clientes-card:nth-child(4) .clientes-cards-img {
+    background-image: url(https://modaellos.com//wp-content/uploads/2020/05/tendencias-trajes-hombre-british-mango.jpg);
+}
+
+.clientes-card:nth-child(5) .clientes-cards-img {
+    background-image: url(https://valverdeasociados.sitioinmuebles.com/uploads/inmobiliarias/1652303705_logosolo.jpg);
+}
+
+.clientes-card h3 {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.section-p-small {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.responsive-btn {
+    display: none;
+}
+
+@media (max-width:760px) {
+    .title-container button {
+        display: none;
+    }
+    .responsive-btn {
+        display: block;
+    }
+}
+
+/*Clientes*/
+/*Servicios*/
+
+#servicios {
+    flex-direction: column;
+    width: min(600px, 90%);
+    gap: 40px;
+}
+
+.servicios-title-container {
+    text-align: center;
+    width: 85%;
+}
+
+.servicios-cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.servicios-card {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0px 50px;
+    width: min(70vw, 600px);
+    height: 100px;
+    background-color: rgb(51, 51, 51);
+    border: 3px solid #d91e41;
+}
+
+.servicios-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.icono {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.divider {
+    width: min(90%, 600px);
+    margin-top: 80px;
+    height: 3px;
+    background-color: #d91e41;
+}
+
+@media (max-width: 576px) {
+    .servicios-card {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 30px 0px;
+        text-align: center;
+        gap: 15px;
+    }
+    .servicios-info {
+        flex-direction: column;
+        width: 80%;
+    }
+    .servicios-icono {
+        font-size: 15px;
+    }
+
+    .iframeimg{
+        width: 300px;
+    }
+
+    .ventajas-cards-container {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .Ventajana {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+    }
+    
+    .ventajas-content {
+        display: flex;
+        max-width: 300px;
+        flex: 1 1 50%;
+        gap: 20px;
+    }
+}
+
+/*Servicios*/
+/*Footer*/
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1300px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 70px;
+    padding: 30px;
+}
+
+.footer-msg {
+    text-align: justify;
+    font-weight: 700;
+    font-size: 25px;
+    max-width: 450px;
+}
+
+.footer-info {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 14px;
+    min-height: 100px;
+}
+
+.footer-social i:last-child {
+    margin-left: 10px;
+}
+
+.footer-terms {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-terms a {
+    color: white;
+    font-weight: 300;
+}
+
+
+.footer12{
+    margin-bottom: 40px;
+}
+
+@media (max-width: 945px) {
+    .footer {
+        gap: 40px;
+    }
+    .footer-msg{
+        max-width: 600px;
+        text-align: center;
+    }
+    .footer-info{
+        align-items: center;
+        gap: 20px;
+    }
+    .footer-terms{
+        justify-content: center;
+        text-align: center;
+    }
+}

@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: rgb(51, 51, 51);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    border-radius: 10px;
+    border: 2px solid #d91e41;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.image-container {
+    width: 50%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+input {
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+label {
+    color: white;
+}
+
+button {
+    width: 75%;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #d91e41;
+    border: 1px solid #fafafa;
+    color: white;
+    transition:all 0.4s ease-out;
+}
+
+.registro{
+    width: 75%;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #d91e41;
+    border: 1px solid #fafafa;
+    color: white;
+    transition:all 0.4s ease-out;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #97112a;
+    transition:all 0.4s ease-in;
+}
+
+.divider {
+    width: min(90%, 600px);
+    height: 2px;
+    background-color: #d91e41;
+}
+
+.forget-password {
+    display: flex;
+    gap: 20px;
+}
+
+.forget-password a {
+    color: white;
+    font-weight: 200;
+    font-size: 12px;
+}
+
+.registration-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: rgb(51, 51, 51);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 10px;
+    border: 2px solid #d91e41;
+}
+
+p {
+    color: white;
+    font-weight: 200;
+    font-size: 15px;
+}
+
+a {
+    color: #d91e41;
+    font-weight: 800;
+    font-size: 15px;
+}
